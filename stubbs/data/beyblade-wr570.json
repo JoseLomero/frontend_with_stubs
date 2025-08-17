@@ -1,0 +1,12 @@
+{
+  "key": "WR5-70DB",
+  "name": "WizardRod 5-70DB",
+  "line": "UX",
+  "owned": true,
+  "type": "Resistance",
+  "lockChip": "Wizard",
+  "blade": "Rod",
+  "ratchet": "5-70",
+  "bit": "DiscBall",
+  "image": "https://static.wikia.nocookie.net/beyblade/images/c/c4/WizardRod_5-70DB.jpg"
+}

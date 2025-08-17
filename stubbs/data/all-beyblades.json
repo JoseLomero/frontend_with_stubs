@@ -1,38 +1,38 @@
 [
   {
-    "key": "BCN",
-    "name": "Josep Tarradellas",
-    "country": "Spain",
-    "city": "Barcelona"
+    "key": "DB1-60A",
+    "name": "DranBuster 1-60A",
+    "line": "UX",
+    "owned": true
   },
   {
-    "key": "MAD",
-    "name": " Adolfo Suárez Madrid",
-    "country": "Spain",
-    "city": "Madrid"
+    "key": "DBS6-60V",
+    "name": "DranBrave S6-60V",
+    "line": "CX",
+    "owned": true
   },
   {
-    "key": "FCO",
-    "name": "Fiumicino",
-    "country": "Italy",
-    "city": "Roma"
+    "key": "HRT4-70K",
+    "name": "HellsReaper T4-70K",
+    "line": "CX",
+    "owned": false
   },
   {
-    "key": "LHR",
-    "name": "Heathrow",
-    "country": "United Kindom",
-    "city": "London"
+    "key": "PW9-60GF",
+    "name": "PhoenixWing 9-60GF",
+    "line": "BX",
+    "owned": true
   },
   {
-    "key": "CDG",
-    "name": "Charles de Gaulle",
-    "country": "France",
-    "city": "Paris"
+  "key": "KM3-85BS",
+  "name": "KnightMail 3-85BS",
+  "line": "UX",
+  "owned": true
   },
   {
-    "key": "LIS",
-    "name": "Humberto Delgado",
-    "country": "Portugal",
-    "city": "Lisbon"
+  "key": "WR5-70DB",
+  "name": "WizardRod 5-70DB",
+  "line": "UX",
+  "owned": true
   }
 ]

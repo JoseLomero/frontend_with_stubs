@@ -1,0 +1,13 @@
+{
+  "key": "DB1-60A",
+  "name": "DranBuster 1-60A",
+  "line": "UX",
+  "owned": true,
+  "type": "Attack",
+  "lockChip": "Dran",
+  "blade": "Buster",
+  "ratchet": "1-60",
+  "bit": "Accel",
+  "image": "https://static.wikia.nocookie.net/beyblade/images/9/96/DranBuster_1-60A.jpg"
+}
+
