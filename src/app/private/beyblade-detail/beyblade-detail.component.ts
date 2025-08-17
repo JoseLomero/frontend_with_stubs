@@ -38,5 +38,6 @@ export class BeybladeDetailComponent implements OnInit {
 
   public loadBeyblade(beyblade: any): void {
     this.beybladesListStore.loadBeyblade(beyblade);
+    console.log(this.beyblade$);
   }
 }

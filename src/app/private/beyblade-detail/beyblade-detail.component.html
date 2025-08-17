@@ -8,23 +8,29 @@
     {{ error }}
   </div>
 }
-@else {
+@if (beyblade$ | async; as beyblade) {
   <div class="beyblade-detail">
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title>{{ beyblade$.name }}</mat-card-title>
-        <mat-card-subtitle>{{ beyblade$.key }}</mat-card-subtitle>
+        <mat-card-title>{{ beyblade?.name }}</mat-card-title>
+        <mat-card-subtitle>{{ beyblade?.key }}</mat-card-subtitle>
       </mat-card-header>
-      @if (beyblade$.image) {
+      @if (beyblade?.image) {
         <div class="image-container">
-          <img mat-card-image [src]="beyblade$.image" [alt]="beyblade$.name" />
+          <img mat-card-image [src]="beyblade?.image" [alt]="beyblade?.name" />
         </div>
       }
       <mat-card-content>
-        <p><strong>City:</strong> {{ beyblade$.city }}</p>
-        <p><strong>Country:</strong> {{ beyblade$.country }}</p>
-        <p><strong>Owner:</strong> {{ beyblade$.owner }}</p>
-        <p><strong>Built:</strong> {{ beyblade$.built }}</p>
+        <p><strong>Line:</strong> {{ beyblade?.line }}</p>
+        <p><strong>Owned:</strong> {{ beyblade?.owned ? "Yes" : "No" }}</p>
+        <p><strong>Type:</strong> {{ beyblade?.type }}</p>
+        <p><strong>Lock Chip:</strong> {{ beyblade?.lockChip }}</p>
+        <p><strong>Blade:</strong> {{ beyblade?.blade }}</p>
+        @if (beyblade?.assist) {
+          <p><strong>Assist:</strong> {{ beyblade?.assist }}</p>
+        }
+        <p><strong>Ratchet:</strong> {{ beyblade?.ratchet }}</p>
+        <p><strong>Bit:</strong> {{ beyblade?.bit }}</p>
       </mat-card-content>
     </mat-card>
   </div>
