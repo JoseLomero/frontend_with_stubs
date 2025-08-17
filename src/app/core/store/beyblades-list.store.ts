@@ -13,12 +13,16 @@ export class BeybladesListStore {
   public readonly beybladesList$ = this.beybladesList.asObservable();
 
   private readonly beybladeListLoading = new BehaviorSubject<boolean>(false);
-  public readonly beybladeListLoading$ = this.beybladeListLoading.asObservable();
-
-  private readonly beyblade = new BehaviorSubject<Beyblade | undefined>(
-    undefined
-  );
-  public readonly beyblade$ = this.beyblade.asObservable();
+  public readonly beybladeListLoading$ =
+    this.beybladeListLoading.asObservable();
+    
+    private readonly beyblade = new BehaviorSubject<Beyblade | undefined>(
+      undefined
+    );
+    public readonly beyblade$ = this.beyblade.asObservable();
+    private readonly beybladeLoading = new BehaviorSubject<boolean>(false);
+    public readonly beybladeLoading$ =
+      this.beybladeListLoading.asObservable();
 
   //   public getAllBeyblades(): Observable<Beyblade[] | undefined> {
   //     return this.beybladeListApi
@@ -49,6 +53,7 @@ export class BeybladesListStore {
   }
 
   public loadBeyblade(beybladeKey: string): void {
+    this.beybladeLoading.next(true);
     this.beybladeListApi
       .getBeyblade(beybladeKey)
       .pipe(tap((beybladeResponse) => this.beyblade.next(beybladeResponse)))
