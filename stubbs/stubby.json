@@ -42,7 +42,7 @@
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-bcn.json"
+      "file": "data/beyblade-bcn.json"
     }
   },
   {
@@ -56,7 +56,7 @@
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-mad.json"
+      "file": "data/beyblade-mad.json"
     }
   },
   {
@@ -70,7 +70,7 @@
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-cdg.json"
+      "file": "data/beyblade-cdg.json"
     }
   },
   {
@@ -84,7 +84,7 @@
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-fco.json"
+      "file": "data/beyblade-fco.json"
     }
   },
   {
@@ -98,7 +98,7 @@
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-lhr.json"
+      "file": "data/beyblade-lhr.json"
     }
   },
   {
@@ -112,7 +112,7 @@
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-lis.json"
+      "file": "data/beyblade-lis.json"
     }
   }
 ]
