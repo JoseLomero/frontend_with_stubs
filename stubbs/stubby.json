@@ -1,0 +1,118 @@
+[
+  {
+    "request": {
+      "url": "/login",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "securityKey": "mock-key"
+      },
+      "post": "^\\{\"username\":\"test\",\"password\":\"1234\"\\}$"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      },
+      "file": "./data/login.json"
+    }
+  },
+  {
+    "request": {
+      "url": "/allBeyblades",
+      "method": "GET",
+      "headers": {
+        "securityKey": "mock-key"
+      }
+    },
+    "response": {
+      "status": 200,
+      "file": "data/all-beyblades.json"
+    }
+  },
+  {
+    "request": {
+      "url": "/beyblade",
+      "method": "POST",
+      "post": "{\"key\":\"BCN\"}",
+      "headers": {
+        "securityKey": "mock-key"
+      }
+    },
+    "response": {
+      "status": 200,
+      "file": "data/aiport-bcn.json"
+    }
+  },
+  {
+    "request": {
+      "url": "/beyblade",
+      "method": "POST",
+      "post": "{\"key\":\"MAD\"}",
+      "headers": {
+        "securityKey": "mock-key"
+      }
+    },
+    "response": {
+      "status": 200,
+      "file": "data/aiport-mad.json"
+    }
+  },
+  {
+    "request": {
+      "url": "/beyblade",
+      "method": "POST",
+      "post": "{\"key\":\"CDG\"}",
+      "headers": {
+        "securityKey": "mock-key"
+      }
+    },
+    "response": {
+      "status": 200,
+      "file": "data/aiport-cdg.json"
+    }
+  },
+  {
+    "request": {
+      "url": "/beyblade",
+      "method": "POST",
+      "post": "{\"key\":\"FCO\"}",
+      "headers": {
+        "securityKey": "mock-key"
+      }
+    },
+    "response": {
+      "status": 200,
+      "file": "data/aiport-fco.json"
+    }
+  },
+  {
+    "request": {
+      "url": "/beyblade",
+      "method": "POST",
+      "post": "{\"key\":\"LHR\"}",
+      "headers": {
+        "securityKey": "mock-key"
+      }
+    },
+    "response": {
+      "status": 200,
+      "file": "data/aiport-lhr.json"
+    }
+  },
+  {
+    "request": {
+      "url": "/beyblade",
+      "method": "POST",
+      "post": "{\"key\":\"LIS\"}",
+      "headers": {
+        "securityKey": "mock-key"
+      }
+    },
+    "response": {
+      "status": 200,
+      "file": "data/aiport-lis.json"
+    }
+  }
+]

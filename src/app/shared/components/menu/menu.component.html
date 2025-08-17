@@ -1,0 +1,10 @@
+<mat-nav-list class="menu-list">
+    @for (item of menuItems; track item) {
+    <mat-list-item (click)="navigateTo(item.route)" class="menu-item">
+        <div class="menu-item-content">
+            <span matLine>{{item.label}}</span>
+            <mat-icon matListIcon>{{item.icon}}</mat-icon>
+        </div>
+    </mat-list-item>
+    }
+</mat-nav-list>

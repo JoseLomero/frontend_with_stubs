@@ -1,0 +1,40 @@
+@if (loading$ | async) {
+<div class="spinner-container">
+  <mat-spinner></mat-spinner>
+</div>
+}
+@else if (error) {
+<div class="error-container">
+  {{ error }}
+</div>
+}
+@else {
+<div class="aiports-list">
+  <h1>Beyblades List:</h1>
+  <img src="assets/departures.jpg" alt="departures" class="beyblades-image">
+  <p class="beyblades-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium rhoncus sapien et maximus. Maecenas
+    malesuada ipsum tortor, ac dapibus eros ultrices ac. In risus risus, vehicula sit amet nulla ut, laoreet
+    vestibulum ipsum. Proin lobortis quam eu blandit scelerisque. Integer accumsan velit id gravida venenatis.
+    Vivamus lorem leo, porta laoreet odio id, interdum sodales dui. Integer at ornare dui. Praesent id laoreet sem.
+    Curabitur ac tincidunt neque. Pellentesque a dolor viverra, mattis nisi nec, feugiat nibh. Cras eu egestas quam.
+    Proin vel efficitur mauris.
+    Pellentesque sit amet dolor id ipsum varius consequat. Donec accumsan leo neque, ut bibendum velit fermentum
+    quis. Cras congue risus rutrum mattis scelerisque. Sed nec nibh ipsum. Nullam at tincidunt risus. Proin nec
+    ullamcorper tellus. Nam id neque lacus. </p>
+  <div class="beyblades-list-containers">
+    @for (beyblade of beybladesList$ | async; track beyblade) {
+    <mat-card class="beyblade-card" (click)="navigateToBeyblade(beyblade.key)">
+      <mat-card-header>
+        <mat-card-title>{{beyblade.name}}</mat-card-title>
+        <mat-card-subtitle>{{beyblade.key}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p><strong>City:</strong> {{beyblade.city}}</p>
+        <p><strong>Country:</strong> {{beyblade.country}}</p>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</div>
+}

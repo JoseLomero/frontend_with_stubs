@@ -1,0 +1,40 @@
+@import "../../../../styles.scss";
+
+mat-toolbar {
+  background: $gray-60;
+  color: $color-white;
+  padding: 0 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .logo {
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    mat-icon {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  button[mat-icon-button] {
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

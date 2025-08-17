@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <div class="left-section">
+        <a matIconButton class="back-button" (click)="logout()">
+            <mat-icon>arrow_back</mat-icon>
+        </a>
+        <img src="assets/logo-transparent.png" alt="logo" class="logo">
+    </div>
+    <div class="right-section">
+        <mat-icon>account_circle</mat-icon>
+        <span>{{ userName }} | {{ userEmail }}</span>
+        <a matIconButton class="back-button" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+        </a>
+    </div>
+</mat-toolbar>

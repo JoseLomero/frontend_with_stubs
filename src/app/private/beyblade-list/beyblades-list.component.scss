@@ -1,0 +1,44 @@
+@import "../../../styles";
+
+.beyblades-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.beyblades-text {
+  margin-bottom: 10px;
+}
+
+.beyblades-list-containers {
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.aiports-list {
+  margin: 10px;
+}
+
+.beyblade-card {
+  border: 1px solid $gray-20;
+  max-width: 100%;
+  margin: 20px 0;
+  cursor: pointer;
+  .mat-card-content {
+    margin-left: 15px;
+  }
+}
+
+.spinner-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 50%;
+
+  mat-spinner {
+    margin: 0 auto;
+  }
+}

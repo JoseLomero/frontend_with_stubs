@@ -1,0 +1,6 @@
+{
+    "id": 1,
+    "username": "test",
+    "token": "mock-jwt-token",
+    "email": "test@example.com"
+}

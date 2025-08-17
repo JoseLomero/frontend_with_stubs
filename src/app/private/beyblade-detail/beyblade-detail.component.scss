@@ -1,0 +1,35 @@
+@import "../../../styles";
+
+.beyblade-detail {
+  padding: 0 20px;
+}
+  
+.example-card {
+  margin-top: 16px;
+  cursor: pointer;
+  .mat-card-content {
+    margin-left: 15px;
+  }
+}
+
+.image-container {
+  padding: 5px 20px;
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.spinner-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 50%;
+
+  mat-spinner {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../../styles.scss";
+
+.menu-list {
+  border: 1px solid $gray-20;
+  color: $color-white;
+  width: 200px;
+  margin-top: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0;
+
+  mat-list-item {
+    border: 1px solid $gray-20;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    mat-icon {
+      color: $color-black;
+      font-size: 24px;
+      margin-right: 16px;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  .menu-item-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    
+    span {
+      flex: 1;
+    }
+    
+    mat-icon {
+      margin-left: 16px;
+    }
+  }
+}
