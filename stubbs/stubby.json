@@ -35,84 +35,84 @@
     "request": {
       "url": "/beyblade",
       "method": "POST",
-      "post": "{\"key\":\"BCN\"}",
+      "post": "{\"key\":\"DB1-60A\"}",
       "headers": {
         "securityKey": "mock-key"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/beyblade-bcn.json"
+      "file": "data/beyblade-db160.json"
     }
   },
   {
     "request": {
       "url": "/beyblade",
       "method": "POST",
-      "post": "{\"key\":\"MAD\"}",
+      "post": "{\"key\":\"DBS6-60V\"}",
       "headers": {
         "securityKey": "mock-key"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/beyblade-mad.json"
+      "file": "data/beyblade-dbs660.json"
     }
   },
   {
     "request": {
       "url": "/beyblade",
       "method": "POST",
-      "post": "{\"key\":\"CDG\"}",
+      "post": "{\"key\":\"HRT4-70K\"}",
       "headers": {
         "securityKey": "mock-key"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/beyblade-cdg.json"
+      "file": "data/beyblade-hrt470.json"
     }
   },
   {
     "request": {
       "url": "/beyblade",
       "method": "POST",
-      "post": "{\"key\":\"FCO\"}",
+      "post": "{\"key\":\"KM3-85BS\"}",
       "headers": {
         "securityKey": "mock-key"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/beyblade-fco.json"
+      "file": "data/beyblade-km385.json"
     }
   },
   {
     "request": {
       "url": "/beyblade",
       "method": "POST",
-      "post": "{\"key\":\"LHR\"}",
+      "post": "{\"key\":\"PW9-60GF\"}",
       "headers": {
         "securityKey": "mock-key"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/beyblade-lhr.json"
+      "file": "data/beyblade-pw960.json"
     }
   },
   {
     "request": {
       "url": "/beyblade",
       "method": "POST",
-      "post": "{\"key\":\"LIS\"}",
+      "post": "{\"key\":\"WR5-70DB\"}",
       "headers": {
         "securityKey": "mock-key"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/beyblade-lis.json"
+      "file": "data/beyblade-wr570.json"
     }
   }
 ]
