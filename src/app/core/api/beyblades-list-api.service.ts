@@ -1,6 +1,6 @@
 import { inject, Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Beyblade } from "../../private/beyblade-list/beyblade";
+import { Beyblade, BeybladeDetail } from "../../private/beyblade-list/beyblade";
 import { HttpHeadersService } from "../services/http-headers.service";
 import { environment } from "src/environments/environment";
 import { Observable } from "rxjs";
@@ -18,9 +18,9 @@ export class BeybladesListApiService {
     });
   }
 
-  public getBeyblade(beybladeKey: string): Observable<Beyblade | undefined> {
+  public getBeyblade(beybladeKey: string): Observable<BeybladeDetail | undefined> {
     const url = `${this.API_URL}/beyblade`;
-    return this.http.post<Beyblade>(
+    return this.http.post<BeybladeDetail>(
       url,
       { key: beybladeKey },
       { headers: this.headersService.getCommonHeaders() }

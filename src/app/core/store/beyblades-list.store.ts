@@ -1,5 +1,5 @@
 import { inject, Injectable } from "@angular/core";
-import { Beyblade } from "../../private/beyblade-list/beyblade";
+import { Beyblade, BeybladeDetail } from "../../private/beyblade-list/beyblade";
 import { BehaviorSubject, tap } from "rxjs";
 import { BeybladesListApiService } from "../api/beyblades-list-api.service";
 
@@ -16,7 +16,7 @@ export class BeybladesListStore {
   public readonly beybladeListLoading$ =
     this.beybladeListLoading.asObservable();
     
-    private readonly beyblade = new BehaviorSubject<Beyblade | undefined>(
+    private readonly beyblade = new BehaviorSubject<BeybladeDetail | undefined>(
       undefined
     );
     public readonly beyblade$ = this.beyblade.asObservable();
@@ -50,13 +50,13 @@ export class BeybladesListStore {
         )
       )
       .subscribe({ complete: () => this.beybladeListLoading.next(false) });
-  }
-
-  public loadBeyblade(beybladeKey: string): void {
-    this.beybladeLoading.next(true);
-    this.beybladeListApi
+    }
+    
+    public loadBeyblade(beybladeKey: string): void {
+      this.beybladeLoading.next(true);
+      this.beybladeListApi
       .getBeyblade(beybladeKey)
       .pipe(tap((beybladeResponse) => this.beyblade.next(beybladeResponse)))
-      .subscribe();
+      .subscribe({ complete: () => this.beybladeLoading.next(false) });
   }
 }

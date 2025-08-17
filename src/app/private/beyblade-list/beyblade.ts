@@ -1,13 +1,15 @@
 export interface Beyblade {
     key: string;
     name: string;
-    line?: string;
+    line: string;
     owned: boolean;
-    type?: string;
-    blade?: string;
-    ratchet?: string;
-    bit?: string;
-    image?: string;
+    type: string;
+    lockChip: string;
+    blade: string;
+    assist?: string;
+    ratchet: string;
+    bit: string;
+    image: string;
 }
 
 export interface BeybladeDetail {
