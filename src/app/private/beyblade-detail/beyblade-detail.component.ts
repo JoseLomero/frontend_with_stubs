@@ -27,8 +27,8 @@ export class BeybladeDetailComponent implements OnInit {
   private readonly beybladesListStore = inject(BeybladesListStore);
   private readonly route = inject(ActivatedRoute);
 
-  public readonly beyblade$ = this.beybladesListStore.beyblade$;
-  public readonly loading$ = this.beybladesListStore.beybladeLoading$;
+  public readonly beyblade = this.beybladesListStore.beyblade;
+  public readonly loading = this.beybladesListStore.beybladeLoading;
   public error: string | null = null;
 
   public ngOnInit(): void {
@@ -38,6 +38,6 @@ export class BeybladeDetailComponent implements OnInit {
 
   public loadBeyblade(beyblade: any): void {
     this.beybladesListStore.loadBeyblade(beyblade);
-    console.log(this.beyblade$);
+    console.log(this.beyblade);
   }
 }

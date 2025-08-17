@@ -28,8 +28,11 @@ export class BeybladesListComponent implements OnInit {
   private readonly beybladesListStore = inject(BeybladesListStore)
   private readonly router = inject(Router)
 
-  public readonly beybladesList$ = this.beybladesListStore.beybladesList$;
-  public readonly loading$ = this.beybladesListStore.beybladeListLoading$;
+  // MAIN CHANGES FOR SIGNALS (FROM BehaviorSubject)
+  // Now you DO NOT have to subscribe using "| async", just read them as a method call 
+
+  public readonly beybladesList = this.beybladesListStore.beybladesList;
+  public readonly loading = this.beybladesListStore.beybladeListLoading;
   public error: string | null = null;
 
   public ngOnInit(): void {
