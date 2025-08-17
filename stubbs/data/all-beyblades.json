@@ -3,36 +3,42 @@
     "key": "DB1-60A",
     "name": "DranBuster 1-60A",
     "line": "UX",
-    "owned": true
+    "owned": true,
+    "type": "Attack"
   },
   {
     "key": "DBS6-60V",
     "name": "DranBrave S6-60V",
     "line": "CX",
-    "owned": true
+    "owned": true,
+    "type": "Attack"
   },
   {
     "key": "HRT4-70K",
     "name": "HellsReaper T4-70K",
     "line": "CX",
-    "owned": false
+    "owned": false,
+    "type": "Stamina"
   },
   {
     "key": "PW9-60GF",
     "name": "PhoenixWing 9-60GF",
     "line": "BX",
-    "owned": true
+    "owned": true,
+    "type": "Attack"
   },
   {
   "key": "KM3-85BS",
   "name": "KnightMail 3-85BS",
   "line": "UX",
-  "owned": true
+  "owned": true,
+  "type": "Defense"
   },
   {
   "key": "WR5-70DB",
   "name": "WizardRod 5-70DB",
   "line": "UX",
-  "owned": true
+  "owned": true,
+  "type": "Resistance"
   }
 ]
