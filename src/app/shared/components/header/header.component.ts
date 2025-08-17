@@ -22,6 +22,10 @@ export class HeaderComponent {
     this.router.navigate(['/login']);
   }
 
+  navigateToHome(): void {
+    this.router.navigate(['/']);
+  }
+
   get isLoggedIn(): boolean {
     return !!this.authStore.currentUserValue?.token;
   }
