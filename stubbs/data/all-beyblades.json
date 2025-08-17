@@ -28,17 +28,17 @@
     "type": "Attack"
   },
   {
-  "key": "KM3-85BS",
-  "name": "KnightMail 3-85BS",
-  "line": "UX",
-  "owned": true,
-  "type": "Defense"
+    "key": "KM3-85BS",
+    "name": "KnightMail 3-85BS",
+    "line": "UX",
+    "owned": true,
+    "type": "Defense"
   },
   {
-  "key": "WR5-70DB",
-  "name": "WizardRod 5-70DB",
-  "line": "UX",
-  "owned": true,
-  "type": "Resistance"
+    "key": "WR5-70DB",
+    "name": "WizardRod 5-70DB",
+    "line": "UX",
+    "owned": true,
+    "type": "Resistance"
   }
 ]
