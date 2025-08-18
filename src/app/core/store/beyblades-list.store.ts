@@ -1,5 +1,5 @@
 import { inject, Injectable } from "@angular/core";
-import { Beyblade, BeybladeDetail } from "../../private/beyblade-list/beyblade";
+import { Beyblade, BeybladeDetail } from "../entities/beyblade";
 import { BehaviorSubject, tap } from "rxjs";
 import { BeybladesListApiService } from "../api/beyblades-list-api.service";
 

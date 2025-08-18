@@ -1,6 +1,6 @@
 import { inject, Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Beyblade, BeybladeDetail } from "../../private/beyblade-list/beyblade";
+import { Beyblade, BeybladeDetail } from "../entities/beyblade";
 import { HttpHeadersService } from "../services/http-headers.service";
 import { environment } from "src/environments/environment";
 import { Observable } from "rxjs";
