@@ -1,5 +1,5 @@
-import { inject, Injectable } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
+import { inject, Injectable, signal } from "@angular/core";
+import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { AuthApiService } from "../api/auth-api.service";
 
@@ -8,18 +8,17 @@ import { AuthApiService } from "../api/auth-api.service";
 })
 export class AuthStore {
   private readonly authApiService = inject(AuthApiService);
-  private currentUserSubject: BehaviorSubject<any>;
-  public currentUser: Observable<any>;
+  private _currentUser = signal<any>(undefined);
+  public currentUser = this._currentUser.asReadonly();
 
   constructor() {
-    this.currentUserSubject = new BehaviorSubject<any>(
+    this._currentUser = signal<any>(
       JSON.parse(localStorage.getItem("currentUser") || "{}")
     );
-    this.currentUser = this.currentUserSubject.asObservable();
   }
 
   public get currentUserValue(): any {
-    return this.currentUserSubject.value;
+    return this._currentUser();
   }
 
   login(username: string, password: string): Observable<any> {
@@ -27,7 +26,7 @@ export class AuthStore {
       .pipe(
         map((user) => {
           localStorage.setItem("currentUser", JSON.stringify(user));
-          this.currentUserSubject.next(user);
+          this._currentUser.set(user);
           return user;
         })
       );
@@ -35,7 +34,7 @@ export class AuthStore {
 
   logout() {
     localStorage.removeItem("currentUser");
-    this.currentUserSubject.next({});
+    this._currentUser.set({});
   }
 
   isAuthenticated(): boolean {
