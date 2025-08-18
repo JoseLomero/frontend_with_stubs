@@ -4,6 +4,7 @@ import { BeybladeDetailComponent } from './private/beyblade-detail/beyblade-deta
 import { LoginComponent } from './public/auth/login.component';
 import { AuthGuard } from './public/auth/auth.guard';
 import { PrivateComponent } from './private/private.component';
+import { PublicComponent } from './public/public.component';
 
 export const routes: Routes = [
   {
@@ -27,7 +28,13 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'login',
-    component: LoginComponent
+    path: '',
+    component: PublicComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+    ]
   },
 ];

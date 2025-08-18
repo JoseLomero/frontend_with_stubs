@@ -1,17 +1,21 @@
 <mat-toolbar>
   <div class="left-section">
-    <a matIconButton class="back-button" (click)="logout()">
-      <mat-icon>arrow_back</mat-icon>
-    </a>
+    @if (isLoggedIn) {
+      <a matIconButton class="back-button" (click)="logout()">
+        <mat-icon>arrow_back</mat-icon>
+      </a>
+    }
     <a class="logo-container" (click)="navigateToHome()">
       <img src="assets/logo-transparent.png" alt="logo" class="logo" />
     </a>
   </div>
-  <div class="right-section">
-    <mat-icon>account_circle</mat-icon>
-    <span>{{ userName }} | {{ userEmail }}</span>
-    <a matIconButton class="back-button" (click)="logout()">
-      <mat-icon>logout</mat-icon>
-    </a>
-  </div>
+  @if (isLoggedIn) {
+    <div class="right-section">
+      <mat-icon>account_circle</mat-icon>
+      <span>{{ userName }} | {{ userEmail }}</span>
+      <a matIconButton class="back-button" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+      </a>
+    </div>
+  }
 </mat-toolbar>
