@@ -4,41 +4,47 @@
     "name": "DranBuster 1-60A",
     "line": "UX",
     "owned": true,
-    "type": "Attack"
+    "type": "Attack",
+    "image": "https://static.wikia.nocookie.net/beyblade/images/9/96/DranBuster_1-60A.jpg"
   },
   {
     "key": "DBS6-60V",
     "name": "DranBrave S6-60V",
     "line": "CX",
     "owned": true,
-    "type": "Attack"
+    "type": "Attack",
+    "image": "https://static.wikia.nocookie.net/beyblade/images/1/16/DranBrave_S6-60V.png"
   },
   {
     "key": "HRT4-70K",
     "name": "HellsReaper T4-70K",
     "line": "CX",
     "owned": false,
-    "type": "Stamina"
+    "type": "Stamina",
+    "image": "https://static.wikia.nocookie.net/beyblade/images/b/b1/HellsReaper_T4-70K.png"
   },
   {
     "key": "PW9-60GF",
     "name": "PhoenixWing 9-60GF",
     "line": "BX",
     "owned": true,
-    "type": "Attack"
+    "type": "Attack",
+    "image": "https://static.wikia.nocookie.net/beyblade/images/0/02/PhoenixWing_9-60GF.jpeg"
   },
   {
     "key": "KM3-85BS",
     "name": "KnightMail 3-85BS",
     "line": "UX",
     "owned": true,
-    "type": "Defense"
+    "type": "Defense",
+    "image": "https://static.wikia.nocookie.net/beyblade/images/7/78/KnightMail_3-85BS.png"
   },
   {
     "key": "WR5-70DB",
     "name": "WizardRod 5-70DB",
     "line": "UX",
     "owned": true,
-    "type": "Resistance"
+    "type": "Resistance",
+    "image": "https://static.wikia.nocookie.net/beyblade/images/c/c4/WizardRod_5-70DB.jpg"
   }
 ]
