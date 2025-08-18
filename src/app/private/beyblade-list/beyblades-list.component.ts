@@ -30,7 +30,8 @@ export class BeybladesListComponent implements OnInit {
 
   public readonly beybladesList = this.beybladesListStore.beybladesList;
   public readonly loading = this.beybladesListStore.beybladeListLoading;
-  public error: string | null = null;
+  public readonly error = this.beybladesListStore.beybladeError;
+  
 
   public ngOnInit(): void {
     this.loadBeyblades();
@@ -38,14 +39,6 @@ export class BeybladesListComponent implements OnInit {
 
   private loadBeyblades(): void {
     this.beybladesListStore.loadAllBeyblades();
-    // try {
-
-    // } catch (error) {
-    //   this.error = error instanceof Error ? error.message : 'Failed to load beyblades';
-    //   console.error('Error loading beyblades:', error);
-    // } finally {
-    //   this.loading = false;
-    // }
   }
 
   public navigateToBeyblade(key: string): void {

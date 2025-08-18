@@ -1,6 +1,6 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter, NavigationError, withNavigationErrorHandler } from '@angular/router';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
@@ -11,6 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { routes } from './app.routes';
+import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 
 function handleNavigationError(error: NavigationError) {
   console.error('Navigation error:', error);
@@ -24,6 +25,11 @@ export const appConfig: ApplicationConfig = {
       withNavigationErrorHandler(handleNavigationError)
     ),
     provideHttpClient(withInterceptorsFromDi()),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true
+    },
     importProvidersFrom(
       NoopAnimationsModule,
       MatCardModule,

@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 import { BeybladesListStore } from "../../core/store/beyblades-list.store";
 import { CommonModule } from "@angular/common";
 import { MatCardModule } from "@angular/material/card";
@@ -29,15 +29,16 @@ export class BeybladeDetailComponent implements OnInit {
 
   public readonly beyblade = this.beybladesListStore.beyblade;
   public readonly loading = this.beybladesListStore.beybladeLoading;
-  public error: string | null = null;
+  public readonly error = this.beybladesListStore.beybladeError;
 
   public ngOnInit(): void {
     const key = this.route.snapshot.paramMap.get("key");
     this.loadBeyblade(key);
   }
 
-  public loadBeyblade(beyblade: any): void {
-    this.beybladesListStore.loadBeyblade(beyblade);
-    console.log(this.beyblade);
+  public loadBeyblade(beybladeKey: string | null): void {
+    if (beybladeKey) {
+      this.beybladesListStore.loadBeyblade(beybladeKey);
+    }
   }
 }

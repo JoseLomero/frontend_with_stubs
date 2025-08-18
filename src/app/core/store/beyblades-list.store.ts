@@ -17,23 +17,48 @@ export class BeybladesListStore {
   private readonly _beybladeLoading = signal<boolean>(false);
   public readonly beybladeLoading = this._beybladeLoading.asReadonly();
 
+  private readonly _beybladeListError = signal<string | null>(null);
+  public readonly beybladeListError = this._beybladeListError.asReadonly();
+
+  private readonly _beybladeError = signal<string | null>(null);
+  public readonly beybladeError = this._beybladeError.asReadonly();
+
   public loadAllBeyblades(): void {
     this._beybladeListLoading.set(true);
     this.beybladeListApi
       .getAllBeyblades()
       .pipe(
-        tap((beybladeListResponse) =>
-          this._beybladesList.set(beybladeListResponse)
-        )
+        tap({
+          next: (beybladeListResponse) => {
+            this._beybladesList.set(beybladeListResponse)
+          },
+          error: (error) => {
+            this._beybladeListError.set(error.message || 'Failed to load beyblades list')
+          }
+        })
       )
       .subscribe({ complete: () => this._beybladeListLoading.set(false) });
   }
 
   public loadBeyblade(beybladeKey: string): void {
     this._beybladeLoading.set(true);
+    this._beybladeError.set(null);
     this.beybladeListApi
       .getBeyblade(beybladeKey)
-      .pipe(tap((beybladeResponse) => this._beyblade.set(beybladeResponse)))
-      .subscribe({ complete: () => this._beybladeLoading.set(false) });
+      .pipe(
+        tap({
+          next: (beybladeResponse) => {
+            this._beyblade.set(beybladeResponse);
+            this._beybladeError.set(null);
+          },
+          error: (error) => {
+            this._beybladeError.set(error.message || 'Failed to load beyblade details');
+            this._beyblade.set(undefined);
+          }
+        })
+      )
+      .subscribe({ 
+        complete: () => this._beybladeLoading.set(false) 
+      });
   }
 }

@@ -20,21 +20,5 @@ export class AuthApiService {
         { username, password },
         { headers: this.headersService.getCommonHeaders() }
       )
-      .pipe(
-        catchError((error) => {
-          let errorMessage = "Unknown error";
-
-          if (error.status === 401) {
-            errorMessage = "Invalid credentials";
-          } else if (error.status === 0) {
-            errorMessage = "No connection to server";
-          } else if (error.error?.message) {
-            errorMessage = error.error.message;
-          }
-
-          console.error("Error in login:", error);
-          return throwError(() => new Error(errorMessage));
-        })
-      );
   }
 }
