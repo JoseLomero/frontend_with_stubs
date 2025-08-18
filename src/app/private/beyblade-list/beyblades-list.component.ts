@@ -28,8 +28,8 @@ export class BeybladesListComponent implements OnInit {
   private readonly beybladesListStore = inject(BeybladesListStore)
   private readonly router = inject(Router)
 
-  public readonly beybladesList$ = this.beybladesListStore.beybladesList$;
-  public readonly loading$ = this.beybladesListStore.beybladeListLoading$;
+  public readonly beybladesList = this.beybladesListStore.beybladesList;
+  public readonly loading = this.beybladesListStore.beybladeListLoading;
   public error: string | null = null;
 
   public ngOnInit(): void {
